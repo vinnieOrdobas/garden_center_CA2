@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author vinnie
+ * @author Liana and Vinnie
  */
 public class Order {
     private final int orderId;

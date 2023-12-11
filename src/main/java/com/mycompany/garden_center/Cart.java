@@ -8,13 +8,13 @@ import java.util.HashMap;
 
 /**
  *
- * @author vinnie
+ * @author Liana and Vinnie
  */
 public class Cart {
     private final int cartId;
     private final int customerId;
     private CartStatus status;
-    private HashMap<Product, Integer> products;
+    private final HashMap<Product, Integer> products;
     private double totalCost;
 
     public Cart(int cartId, int customerId, CartStatus status) {

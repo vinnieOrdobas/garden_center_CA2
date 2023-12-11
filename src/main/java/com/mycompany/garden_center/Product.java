@@ -6,7 +6,7 @@ package com.mycompany.garden_center;
 
 /**
  *
- * @author vinnie
+ * @author Liana and Vinnie
  */
 public class Product {
     private final int productId;

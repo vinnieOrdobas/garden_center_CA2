@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.ArrayList;
 /**
  *
- * @author vinnie
+ * @author Liana and Vinnie
  */
 public class User {
     private final int id;

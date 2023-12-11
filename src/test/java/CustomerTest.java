@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * 
  *
- * @author vinnie
+ * @author Liana and Vinnie
  */
 public class CustomerTest {
     private Customer customer;
@@ -69,7 +69,6 @@ public class CustomerTest {
         attributes.put("shippingInfo", "New Shipping Info");
 
         customer.updateProfile(attributes);
-
         assertEquals("Jane Doe", customer.getCustomerName());
         assertEquals("456 Elm St", customer.getAddress());
         assertEquals("9876543210", customer.getPhoneNumber());
