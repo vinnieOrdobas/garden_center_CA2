@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author vinnie
+ * @author Liana and Vinnie
  */
 public class Customer extends User {
     private String customerName;
