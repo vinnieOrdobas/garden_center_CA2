@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * 
@@ -62,19 +63,35 @@ public class CustomerTest {
     @Test
     public void testUpdateProfile() {
         Map<String, Object> attributes = new HashMap<>();
-        attributes.put("customerName", "Jane Doe");
-        attributes.put("address", "456 Elm St");
-        attributes.put("phoneNumber", "9876543210");
-        attributes.put("creditCardNumber", "6543210987654321");
-        attributes.put("shippingInfo", "New Shipping Info");
+        attributes.put("customerName", "Liana Gabor");
+        attributes.put("address", "Fairview Road");
+        attributes.put("phoneNumber", "02152552");
+        attributes.put("creditCardNumber", "42456 4562 452");
+        attributes.put("shippingInfo", "Fairview Road");
 
+        // when
         customer.updateProfile(attributes);
-        assertEquals("Jane Doe", customer.getCustomerName());
-        assertEquals("456 Elm St", customer.getAddress());
-        assertEquals("9876543210", customer.getPhoneNumber());
-        assertEquals("6543210987654321", customer.getCreditCardNumber());
-        assertEquals("New Shipping Info", customer.getShippingInfo());
+        
+        //then
+        assertEquals("Liana Gabor",customer.getCustomerName());
+        assertEquals("Fairview Road", customer.getAddress());
+        assertEquals("02152552", customer.getPhoneNumber());
+        assertEquals("42456 4562 452", customer.getCreditCardNumber());
+        assertEquals("Fairview Road", customer.getShippingInfo());
+
     }
+    
+    @Test
+    public void testReturnCart_IllegalArgumentException() {
+        // Given setUp
+        // Assume that necessary setup is done in the setUp method
+
+        // When and Then
+        assertThrows(IllegalArgumentException.class, () -> {
+            customer.getCart(3);
+        });
+    }
+
 
     @Test
     public void testGetCart() {
